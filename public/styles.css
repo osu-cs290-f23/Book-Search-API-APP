@@ -86,8 +86,13 @@ nav a:hover {
 }
 
 .search-results {
+    
     margin-top: 50px;
     text-align: center;
+}
+
+.search-results h2{
+    font-size: 50px;
 }
 
 .input{

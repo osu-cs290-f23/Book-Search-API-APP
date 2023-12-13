@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="list.js"></script>
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "styles.css">
@@ -9,26 +10,23 @@
   </head>
   <body>
     <header>
+
       <nav>
         <ul>
-          <li><a href = "/">Home</a></li>
-          <li><a href = "/about.html">About</a></li>
-          <li><a href = "/mylist.html">My List</a></li>
+            <li><a href = "/">Home</a></li>
+            <li><a href = "/about.html">About</a></li>
+            <li><a href = "/mylist.html">My List</a></li>
         </ul>
       </nav>
     </header>
 
     <main class = "home-page">
+
       <div class = "home-title">
-        <h1> Book Finder </h1>
-      </div>
-      <div id = "search-container">
-        <input type = "text" id = "search-input" placeholder = "Search Books!...">
-        <button id = "search-button"> Search </button>
-      </div>
-      <div class = "search-results">
+        <h1> Community Results! </h1>
       </div>
     </main>
+    <div id = "books-container"></div>
     <script src="app.js"></script>
   </body>
 </html>
