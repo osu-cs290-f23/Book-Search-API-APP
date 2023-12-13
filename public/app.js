@@ -29,9 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
         results.forEach((result) => {
           const listItem = document.createElement("li");
           const title = result.volumeInfo.title;
+          const bookImg = result.volumeInfo.imageLinks.thumbnail
           const authors = result.volumeInfo.authors ? result.volumeInfo.authors.join(", ") : "Unknown Author";
   
-          listItem.innerHTML = `<strong>${title}</strong> by ${authors}`;
+          listItem.innerHTML = `
+          <img src = "${bookImg}" style="max-width: 100px; max-height: 150px;">
+          <br><br>
+          <strong>${title}</strong> by ${authors} 
+          <button class="plus-button">+</button>
+          <br><br>
+          `;
           resultList.appendChild(listItem);
         });
   
