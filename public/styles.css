@@ -66,3 +66,61 @@ nav a:hover {
     font-size: 1.1em;
 }
 
+
+.home-page {
+    padding: 20px;
+}
+
+.home-title {
+    margin-top: 80px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.home-title h2 {
+    color: #333;
+    font-size: 3em; 
+    font-weight: bold; 
+    margin-bottom: 15px; 
+    cursor: pointer; 
+}
+
+.search-results {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.input{
+    display: grid;
+    justify-content: center;
+}
+
+#search-container {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-button {
+    background-color: #ddd;
+    display: inline-block; 
+    vertical-align: top; 
+    padding: 10px;
+    border: 2px solid #333;
+    cursor: pointer;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+#search-button:hover {
+    background-color: #252525;
+    color: white;
+}
+
+#search-input {
+    display: inline-block;
+    margin: 0 auto; 
+    padding: 10px;
+    width: 200px; 
+    border: 2px solid #333;
+}
+
