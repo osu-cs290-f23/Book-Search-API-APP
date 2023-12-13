@@ -1,0 +1,16 @@
+{
+  "name": "final-project-team-westview",
+  "version": "1.0.0",
+  "description": "An app which allows the user to search for a book of their choice within the Google API. The user then has the ability to add this book to their list as well.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0"
+  }
+}
