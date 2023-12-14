@@ -51,32 +51,30 @@ document.addEventListener("DOMContentLoaded", function () {
       const searchResultsHeading = document.createElement("h2");
       searchResultsHeading.textContent = "Search Results:";
       searchResults.appendChild(searchResultsHeading);
-
+     
       if (results && results.length > 0) {
-        const resultList = document.createElement("ul");
-
-        results.forEach((result) => {
-          const listItem = document.createElement("li");
-          const title = result.volumeInfo.title;
-          const bookImg = result.volumeInfo.imageLinks.thumbnail;
-          const authors = result.volumeInfo.authors ? result.volumeInfo.authors.join(", ") : "Unknown Author";
-
-          listItem.innerHTML = `
-            <img src = "${bookImg}" style = "max-width: 100px; max-height: 150px;">
-            <br><br>
-            <strong>${title}</strong> by ${authors} 
-            <form onsubmit = "event.preventDefault(); addBook('${title}', '${bookImg}', '${authors}')">
-              <input type = "Submit" class = "plus-button" value = "❤">
-            </form>
-            <br><br>
-          `;
-          resultList.appendChild(listItem);
-        });
-
-        searchResults.appendChild(resultList);
+         results.forEach((result) => {
+           const bookContainer = document.createElement("div");
+           bookContainer.className = "book-container";
+     
+           const bookImg = result.volumeInfo.imageLinks.thumbnail;
+           const title = result.volumeInfo.title;
+           const authors = result.volumeInfo.authors ? result.volumeInfo.authors.join(", ") : "Unknown Author";
+     
+           bookContainer.innerHTML = `
+             <img src = "${bookImg}" style = "max-width: 100px; max-height: 150px;">
+             <br><br>
+             <strong>${title}</strong> by ${authors} 
+             <form onsubmit = "event.preventDefault(); addBook('${title}', '${bookImg}', '${authors}')">
+               <input type = "Submit" class = "plus-button" value = "❤">
+             </form>
+             <br><br>
+           `;
+           searchResults.appendChild(bookContainer);
+         });
       } else {
-        searchResults.innerHTML = "<p> No results found. </p>";
+         searchResults.innerHTML = "<p> No results found. </p>";
       }
-    }
+     }
 
   });
