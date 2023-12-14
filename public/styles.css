@@ -90,17 +90,19 @@ nav a:hover {
 }
 
 .home-title {
-    margin-top: 80px;
+    color: #333;
+    margin-bottom: 40px;
     font-size: 30px;
     text-align: center;
+    cursor: pointer; 
 }
 
-.home-title h2 {
-    color: #333;
-    font-size: 3em; 
-    font-weight: bold; 
-    margin-bottom: 15px; 
-    cursor: pointer; 
+.home-discription {
+    color: #555;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: -60px; 
 }
 
 .search-results {
@@ -127,7 +129,7 @@ nav a:hover {
     background-color: #ddd;
     display: inline-block; 
     vertical-align: top; 
-    padding: 10px;
+    padding: 8px;
     border: 2px solid #333;
     cursor: pointer;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25);
@@ -164,7 +166,7 @@ nav a:hover {
 .plus-button {
     background-color: white;
     color: #dc3545;
-    padding: 4px 8px; /* Adjust padding as needed */
+    padding: 4px 8px; 
     border: none;
     border-radius: 4px;
     cursor: pointer;
