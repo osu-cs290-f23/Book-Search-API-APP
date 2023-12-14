@@ -86,7 +86,6 @@ nav a:hover {
 }
 
 .search-results {
-    
     margin-top: 50px;
     text-align: center;
 }
@@ -160,4 +159,11 @@ nav a:hover {
 
 ul {
     list-style-type: none;
+}
+
+.books-container{
+    justify-content: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }

@@ -20,7 +20,7 @@ function createBookDiv(book) {
     
     // Create delete button
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
+    deleteButton.textContent = 'Remove';
     deleteButton.addEventListener('click', () => {
         deleteBook(book._id);
     });

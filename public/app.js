@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("search-input");
     const searchButton = document.getElementById("search-button");
     const searchResults = document.querySelector(".search-results");
-  
 
   
     searchButton.addEventListener("click", function () {
@@ -66,11 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
           const authors = result.volumeInfo.authors ? result.volumeInfo.authors.join(", ") : "Unknown Author";
 
           listItem.innerHTML = `
-            <img src="${bookImg}" style="max-width: 100px; max-height: 150px;">
+            <img src = "${bookImg}" style = "max-width: 100px; max-height: 150px;">
             <br><br>
             <strong>${title}</strong> by ${authors} 
-            <form onsubmit="event.preventDefault(); addBook('${title}', '${bookImg}', '${authors}')">
-              <input type="submit" class="plus-button">
+            <form onsubmit = "event.preventDefault(); addBook('${title}', '${bookImg}', '${authors}')">
+              <input type = "Submit" class = "plus-button">
             </form>
             <br><br>
           `;
@@ -79,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         searchResults.appendChild(resultList);
       } else {
-        searchResults.innerHTML = "<p>No results found.</p>";
+        searchResults.innerHTML = "<p> No results found. </p>";
       }
     }
 
