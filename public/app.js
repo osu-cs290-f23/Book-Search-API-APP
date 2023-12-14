@@ -22,13 +22,10 @@ function addBook(title, image, author) {
     });
 }
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("search-input");
     const searchButton = document.getElementById("search-button");
     const searchResults = document.querySelector(".search-results");
-
   
     searchButton.addEventListener("click", function () {
       const searchTerm = searchInput.value.trim();
@@ -69,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <br><br>
             <strong>${title}</strong> by ${authors} 
             <form onsubmit = "event.preventDefault(); addBook('${title}', '${bookImg}', '${authors}')">
-              <input type = "Submit" class = "plus-button">
+              <input type = "Submit" class = "plus-button" value = "❤">
             </form>
             <br><br>
           `;
