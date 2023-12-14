@@ -154,10 +154,10 @@ nav a:hover {
     border-radius: 4px;
   }
   
-  .plus-button:hover {
+.plus-button:hover {
     background-color: #2980b9;
-  }
+}
 
-  ul {
+ul {
     list-style-type: none;
-  }
+}
