@@ -183,9 +183,20 @@ ul {
     list-style-type: none;
 }
 
-.books-container{
+.books-container {
+    display: flex;
     justify-content: center;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    align-items: left;
+    flex-direction: row;
+}
+
+.book-container {
+    width: 300px;
+    height: 350px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #555; 
+    border-radius: 8px;
+    display: inline-block;
+    background-color: white;
 }

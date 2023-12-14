@@ -1,23 +1,32 @@
 
 // Function to create a book div
+
+
+
 function createBookDiv(book) {
+    // Create a container for the book
+    const bookContainer = document.createElement('div');
+    bookContainer.className = 'book-container';
+
+    // Create the bookDiv
     const bookDiv = document.createElement('div');
-    
+    bookDiv.className = 'book-div';
+
     // Create image element
     const image = document.createElement('img');
     image.src = book.image;
     bookDiv.appendChild(image);
-    
+
     // Create author element
     const author = document.createElement('p');
     author.textContent = `Author: ${book.author}`;
     bookDiv.appendChild(author);
-    
+
     // Create title element
     const title = document.createElement('p');
     title.textContent = `Title: ${book.title}`;
     bookDiv.appendChild(title);
-    
+
     // Create delete button
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Remove';
@@ -25,9 +34,13 @@ function createBookDiv(book) {
         deleteBook(book._id);
     });
     bookDiv.appendChild(deleteButton);
-    
-    return bookDiv;
+
+    // Append the bookDiv to the container
+    bookContainer.appendChild(bookDiv);
+
+    return bookContainer;
 }
+
 
 // Function to delete a book
 function deleteBook(bookId) {
