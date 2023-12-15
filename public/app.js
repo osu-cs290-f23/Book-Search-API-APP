@@ -51,33 +51,36 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function displayResults(results) {
-      searchResults.innerHTML = ""; // Clear previous resultsS
-      const searchResultsHeading = document.createElement("h2");
-      searchResultsHeading.textContent = "Search Results:";
-      searchResults.appendChild(searchResultsHeading);
+    searchResults.innerHTML = ""; // Clear previous results
+    booksContainer.innerHTML = ""; // Clear previous book containers
 
-      if (results && results.length > 0) {
-          results.forEach((result) => {
-              const bookContainer = document.createElement("div");
-              bookContainer.className = "book-container";
+    const searchResultsHeading = document.createElement("h2");
+    searchResultsHeading.textContent = "Search Results:";
+    searchResults.appendChild(searchResultsHeading);
 
-              const bookImg = result.volumeInfo.imageLinks.thumbnail;
-              const title = result.volumeInfo.title;
-              const authors = result.volumeInfo.authors ? result.volumeInfo.authors.join(", ") : "Unknown Author";
+    if (results && results.length > 0) {
+        results.forEach((result) => {
+            const bookContainer = document.createElement("div");
+            bookContainer.className = "book-container";
 
-              bookContainer.innerHTML = `
-                  <img src="${bookImg}" style="max-width: 100px; max-height: 150px; margin-top: 50px">
-                  <br><br>
-                  <strong>${title}</strong> by ${authors} 
-                  <form onsubmit="event.preventDefault(); addBook('${title}', '${bookImg}', '${authors}')">
-                      <input type="Submit" class="plus-button" value="❤">
-                  </form>
-                  <br><br>
-              `;
-              booksContainer.appendChild(bookContainer);
-          });
-      } else {
-          searchResults.innerHTML = "<p>No results found.</p>";
-      }
+            const bookImg = result.volumeInfo.imageLinks.thumbnail;
+            const title = result.volumeInfo.title;
+            const authors = result.volumeInfo.authors ? result.volumeInfo.authors.join(", ") : "Unknown Author";
+
+            bookContainer.innerHTML = `
+                <img src="${bookImg}" style="max-width: 100px; max-height: 150px; margin-top: 50px">
+                <br><br>
+                <strong>${title}</strong> by ${authors} 
+                <form onsubmit="event.preventDefault(); addBook('${title}', '${bookImg}', '${authors}')">
+                    <input type="Submit" class="plus-button" value="❤">
+                </form>
+                <br><br>
+            `;
+            booksContainer.appendChild(bookContainer);
+        });
+    } else {
+        searchResults.innerHTML = "<p>No results found.</p>";
+    }
   }
+
 });
