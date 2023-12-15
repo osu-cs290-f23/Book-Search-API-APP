@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
            const authors = result.volumeInfo.authors ? result.volumeInfo.authors.join(", ") : "Unknown Author";
      
            bookContainer.innerHTML = `
-             <img src = "${bookImg}" style = "max-width: 100px; max-height: 150px;">
+             <img src = "${bookImg}" style = "max-width: 100px; max-height: 150px; margin-top: 50px">
              <br><br>
              <strong>${title}</strong> by ${authors} 
              <form onsubmit = "event.preventDefault(); addBook('${title}', '${bookImg}', '${authors}')">
