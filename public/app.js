@@ -56,6 +56,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const searchResultsHeading = document.createElement("h2");
     searchResultsHeading.textContent = "Search Results:";
+    searchResultsHeading.style.border = "1px solid black";
+    searchResultsHeading.style.backgroundColor = "white";
+    searchResultsHeading.style.padding = "8px";
+    searchResultsHeading.style.borderRadius = "5px";
+    searchResultsHeading.style.width = "230px";
+    searchResultsHeading.style.margin = "auto";
     searchResults.appendChild(searchResultsHeading);
 
     if (results && results.length > 0) {
