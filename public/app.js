@@ -31,6 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const searchTerm = searchInput.value.trim();
           // Create search results heading
 
+      if (searchTerm === "") {
+        alert("Please enter a book title.");
+        return;
+      }
+
       if (searchTerm !== "") {
 
         const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchTerm)}`;

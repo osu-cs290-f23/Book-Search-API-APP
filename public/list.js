@@ -1,8 +1,5 @@
 
 // Function to create a book div
-
-
-
 function createBookDiv(book) {
     // Create a container for the book
     const bookContainer = document.createElement('div');
