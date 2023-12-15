@@ -124,10 +124,9 @@ nav a:hover {
 .search-results {
     margin-top: 50px;
     text-align: center;
-}
-
-.search-results h2{
-    font-size: 50px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 20px;
 }
 
 .input{
@@ -226,11 +225,12 @@ ul {
     list-style-type: none;
 }
 
-.books-container {
+#books-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row; 
+    flex-wrap: wrap; 
 }
 
 .book-container {
@@ -240,6 +240,5 @@ ul {
     padding: 10px;
     border: 2px solid #555; 
     border-radius: 8px;
-    display: inline-block;
     background-color: white;
 }
